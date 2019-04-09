@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>FanDuel Code Challenge - HTML</title>
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+      <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link href="https://fonts.googleapis.com/css?family=Quicksand:500" rel="stylesheet">
+   </head>
+   <body>
+      <!-- START NAVBAR -->
+      <div id="navbar" class="ui massive menu">
+         <div class="item">
+            <img src="images/fanduel_logo.png" alt=""/>
+         </div>
+         <div id="navbar-item" class="item">
+            Lobby
+         </div>
+         <div id="navbar-item" class="item">
+            Upcoming
+         </div>
+         <div id="navbar-item" class="active item">
+            Live
+            <i aria-hidden="true" class="angle down icon"></i>
+         </div>
+         <div id="navbar-item" class="item">
+            History
+         </div>
+         <div class="right menu">
+            <div id="navbar-item" class="item">
+               Help
+               <i aria-hidden="true" class="angle down icon"></i>
+            </div>
+            <div id="navbar-item" class="item">
+               <i aria-hidden="true" class="user circle icon"></i>
+               User
+               <i aria-hidden="true" class="angle down icon"></i>
+            </div>
+            <div id="navbar-item" class="item">
+               $1,000,000.00<br/>
+               BALANCE
+            </div>
+         </div>
+         <button id="button" class="ui green tiny button">Add funds</button>
+      </div>
+      <!-- END NAVBAR -->
+      <!-- START GRID -->
+      <div class="ui padded grid">
+         <div class="stretched row">
+            <div id="left-column" class="eleven wide column">
+               <!-- START INFOBOX -->
+               <div class="ui stretched one column grid">
+                  <div class="sixteen wide column">          
+                     <div class="ui segment">
+                        <div id="infobox-div">
+                           <div class="ui stretched padded grid" style="height: 100%">
+                              <div id="infobox-row-1" class="row">
+                                 <div id="infobox-away-team" class="five wide column">
+                                    <p>GOLDEN STATE<br>
+                                       <span style="font-weight: bold; font-size: 1.2em">WARRIORS</span>
+                                    </p>
+                                 </div>
+                                 <div id="infobox-away-score" class="one wide column">
+                                    <p>96</p>
+                                 </div>
+                                 <div id="infobox-game-info" class="four wide column">
+                                    <div>
+                                       <span style="font-weight: bold; font-size: 1.3em">7:34 4th</span><br/><br/>
+                                       Oracle Arena
+                                       <br/>
+                                       Oakland, CA
+                                    </div>
+                                 </div>
+                                 <div id="infobox-home-score" class="one wide column">
+                                    <p>81</p>
+                                 </div>
+                                 <div id="infobox-home-team" class="five wide column">
+                                    <p>OKLAHOMA CITY<br/>
+                                       <span style="font-weight: bold; font-size: 1.2em">THUNDER</span>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div id="infobox-row-2" class="row">
+                                 <div class="sixteen wide column">
+                                    <p>LAST PLAY: TV TIMEOUT. GO GET A SNACK.</p>
+                                 </div>
+                              </div>
+                              <div id="infobox-row-3" class="row">
+                                 <div class="sixteen wide column">
+                                    <p>SHOW:
+                                       <span style="font-weight: bold;">RECENT SHOTS</span><i aria-hidden="true" class="angle down icon"></i>
+                                    </p>
+                                 </div>
+                              </div>
+                              <div id="infobox-row-4" class="row">
+                                 <div class="four wide column infobox-stats">
+                                    <div class="row">
+                                       <div class="infobox-stat-title">FG%</div>
+                                       <div class="infobox-away-stat">55.7%</div>
+                                    </div>
+                                    <div class="ui divider"></div>
+                                    <div class="row">
+                                       <div class="infobox-stat-title">FT%</div>
+                                       <div class="infobox-away-stat">60.0%</div>
+                                    </div>
+                                    <div class="ui divider"></div>
+                                    <div class="row">
+                                       <div class="infobox-stat-title">3P%</div>
+                                       <div class="infobox-away-stat">56.7%</div>
+                                    </div>
+                                 </div>
+                                 <div class="eight wide column">
+                                    <img src="images/shot_chart.png" alt=""/>
+                                 </div>
+                                 <div class="four wide column infobox-stats">
+                                    <div class="row">
+                                       <div class="infobox-stat-title">FG%</div>
+                                       <div class="infobox-home-stat">41.7%</div>
+                                    </div>
+                                    <div class="ui divider"></div>
+                                    <div class="row">
+                                       <div class="infobox-stat-title">FT%</div>
+                                       <div class="infobox-home-stat">80.0%</div>
+                                    </div>
+                                    <div class="ui divider"></div>
+                                    <div class="row">
+                                       <div class="infobox-stat-title">3P%</div>
+                                       <div class="infobox-home-stat">36.7%</div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>   
+                  </div>
+               </div>
+               <!-- END INFOBOX -->
+               <div class="ui stretched two column grid">
+                  <!-- START PLAY BY PLAY -->
+                  <div class="eight wide column">
+                     <div class="ui segment">
+                        <div class="column-header-black">PLAY BY PLAY</div>
+                        <div id="plays">
+                           <div id="play">
+                              <div id="play-image">
+                                 <img src="images/steph_curry.png" width="100%" height="100%" alt=""/>
+                              </div>
+                              <div id="play-info">
+                                 <div>7:34 4th</div>
+                                 <div><strong>Stephen Curry</strong> makes 13-foot jumper. Assisted by <strong>Draymond Green</strong></div>
+                              </div>
+                              <div id="play-score">96-81, GS</div>
+                           </div>
+                           <div id="play">
+                              <div id="play-image">
+                                 <img src="images/kevin_durant.png" width="100%" height="100%" alt="" />
+                              </div>
+                              <div id="play-info">
+                                 <div>7:46 4th</div>
+                                 <div><strong>Kevin Durant</strong> misses 2-foot layup. Rebounded by <strong>Andrew Bogut</strong>.</div>
+                              </div>
+                              <div id="play-score">94-81, GS</div>
+                           </div>
+                           <div id="play">
+                              <div id="play-image">
+                                 <img src="images/klay_thompson.png" width="100%" height="100%" alt="" />
+                              </div>
+                              <div id="play-info">
+                                 <div>7:55 4th</div>
+                                 <div><strong>Klay Thompson</strong> misses 24-foot jumper. Rebounded by <strong>Serge Ibaka</strong>.</div>
+                              </div>
+                              <div id="play-score">94-81, GS</div>
+                           </div>
+                           <div id="play">
+                              <div id="play-image">
+                                 <img src="images/kevin_durant.png" width="100%" height="100%" alt="" />
+                              </div>
+                              <div id="play-info">
+                                 <div>8:17 4th</div>
+                                 <div><strong>Kevin Durant</strong> turnover.</div>
+                              </div>
+                              <div id="play-score">94-81, GS</div>
+                           </div>
+                           <div id="play">
+                              <div id="play-image">
+                                 <img src="images/steph_curry.png" width="100%" height="100%" alt="" />
+                              </div>
+                              <div id="play-info">
+                                 <div>8:27 4th</div>
+                                 <div><strong>Stephen Curry</strong> makes free throw.</div>
+                              </div>
+                              <div id="play-score">93-81, GS</div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- END PLAY BY PLAY -->
+                  <!-- START STATS -->
+                  <div class="eight wide column">
+                     <div class="ui segment">
+                        <div class="column-header-black">STATS</div>
+                     </div>
+                  </div>
+                  <!-- END STATS -->
+               </div>
+            </div>
+            <div id="right-column" class="five wide column">
+               <div class="ui segment">
+                  <div class="column-header-black">YOUR SCORING</div>
+                  <div id="games-menu" class="ui secondary menu">
+                     <div id="this-game-item" class="item">THIS GAME</div>
+                     <div id="all-games-item" class="item">ALL GAMES</div>
+                  </div>
+                  <div id="games-menu-divider" class="ui divider"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END GRID -->
+      <!-- START FOOTER -->
+      <div id="footer">
+         <div id="footer-categories">
+            <div id="footer-menu" class="ui small secondary menu">
+               <div class="active item">NBA</div>
+               <div class="item">MLB</div>
+               <div class="item">NCAAF</div>
+            </div>
+         </div>
+         <div id="icon-left">
+            <i aria-hidden="true" class="angle left big icon"></i>
+         </div>
+         <div id="icon-right">
+            <i aria-hidden="true" class="angle right big icon"></i>
+         </div>
+         <div id="footer-scores">
+            <div class="footer-score super">
+               <div class="footer-score-scores">
+                  <div class="footer-score-abbrv super">
+                     WARRIORS
+                     <br/>
+                     THUNDER
+                  </div>
+                  <div class="footer-score-points super">
+                     87
+                     <br/>
+                     56
+                  </div>
+               </div>
+               <div class="star-player">
+                  <div class="star-player-team">GSW</div>
+                  <div class="star-player-stats">
+                     <span style="font-weight: bold; font-size: 1.2em;" >S. Curry, PG </span>
+                     <br/>
+                     23 points, 6 assists
+                  </div>
+               </div>
+               <div class="star-player">
+                  <div class="star-player-team">OKC</div>
+                  <div class="star-player-stats">
+                     <span style="font-weight: bold; font-size: 1.2em;">K. Durant, SF </span>
+                     <br/>
+                     30 points, 9 rebounds
+                  </div>
+               </div>
+               <div class="footer-score-time super">
+                  7:34 4th - TV: ESPN
+               </div>
+            </div>
+            <div class="footer-score">
+               <div class="footer-score-scores">
+                  <div class="footer-score-abbrv">
+                     CHI
+                     <br/>
+                     BOS
+                  </div>
+                  <div class="footer-score-points">
+                     45
+                     <br/>
+                     34
+                  </div>
+               </div>
+               <div class="footer-score-time">
+                  3:25 2nd
+               </div>
+            </div>
+            <div class="footer-score">
+               <div class="footer-score-scores">
+                  <div class="footer-score-abbrv">
+                     ATL
+                     <br/>
+                     MEM
+                  </div>
+                  <div class="footer-score-points">
+                     43
+                     <br/>
+                     39
+                  </div>
+               </div>
+               <div class="footer-score-time">
+                  6:15 3rd
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- END FOOTER -->
+   </body>
+</html>
